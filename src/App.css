@@ -1,0 +1,204 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0px auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@property --gradient-angle{
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 135deg;
+}
+
+input{
+  height: 40px;
+  width: 300px;
+  padding: 0px 20px;
+  border-radius: 50px;
+  border: 2px solid rgb(72, 59, 173);
+  transition: border .2s;
+  color: rgb(98, 98, 98);
+  font-family: 'Poppins';
+}
+
+input:hover{
+  border: 2px solid rgb(101, 82, 248);
+  
+}
+
+input:focus{
+  border: 3px solid rgb(101, 82, 248);
+  outline: none;
+  
+}
+
+input::placeholder{
+  font-size: 0.8rem;
+  color: rgb(197, 197, 197);
+}
+
+.submit{
+  color: rgb(255, 255, 255);
+  background: linear-gradient(var(--gradient-angle), rgb(148, 134, 255), #286cff);
+  padding:  0px 15px;
+  height: 40px;
+  border: 2px solid rgb(81, 66, 193);
+  border-radius: 50px;
+  font-family: 'Poppins';
+  font-size: 12px;
+  margin-left: 10px;
+  transform: scale(1);
+  transition: all .4s ,--gradient-angle .5s;
+}
+
+.submit:hover{
+  box-shadow: 0px 0px 10px .5px rgba(142, 127, 255, 0.594);
+  --gradient-angle : 280deg;
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+h1{
+  font-family: 'Alan Sans';
+  margin: 30px auto;
+  border-bottom: 1px dashed grey;
+  width: max-content;
+}
+
+h2{
+  font-family: 'Poppins';
+  margin: 40px auto 20px auto;
+  width: max-content;
+  border-bottom: 1px solid grey;
+}
+
+.todos{
+  height: auto;
+  width: 40vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid grey;
+  padding: 0px 20px;
+  border-radius: 20px;
+}
+
+.todos li{
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 40vw;
+  padding: 15px 0px;
+  border-bottom: 1px solid grey;
+}
+
+li .text{
+  flex: 1;
+  font-family: "Ubuntu";
+  text-align: left;
+  font-size: large;
+  font-weight: 600;
+}
+
+li .buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+li .buttons button{
+  font-family: "Alan Sans";
+  color: white;
+}
+
+.buttons .delete{
+  border: none;
+  border-radius: 10px;
+  height: 35px;
+  width: 35px;
+  background: linear-gradient(var(--gradient-angle), rgb(255, 79, 79), rgb(214, 33, 20));
+  transform: scale(1);
+  transition: all .4s ,--gradient-angle .5s;
+}
+.buttons .edit{
+  border: none;
+  border-radius: 10px;
+  height: 35px;
+  width: 35px;
+  padding-left: 2px;
+  background: linear-gradient(var(--gradient-angle), rgb(89, 117, 255), rgb(93, 35, 252));
+  transform: scale(1);
+  transition: all .4s ,--gradient-angle .5s;
+
+}
+
+.buttons i{
+  display: inline-block;
+  text-align: center;
+}
+
+.buttons .delete:hover{
+  cursor: pointer;
+  --gradient-angle : 280deg;
+  box-shadow: 0px 0px 16px 1px rgb(255, 60, 60);
+  transform: scale(1.05);
+}
+.buttons .edit:hover{
+  cursor: pointer;
+  --gradient-angle : 280deg;
+  box-shadow: 0px 0px 16px 1px rgb(88, 102, 255);
+  transform: scale(1.05);
+  
+}
+
+.buttons .up-down-btn{
+  display: flex;
+  gap: 4px;
+  border: 1.5px solid rgba(158, 255, 149, 0.21);
+  border-radius: 8px;
+  padding: 3px 2.6px;
+
+}
+
+.buttons .move-up,
+.buttons .move-down{
+  border: none;
+  border-radius: 6px;
+  height: 30px;
+  width: 30px;
+  background: linear-gradient(var(--gradient-angle), #15f0a7, #15b4bd);
+  font-weight: 700;
+  color: whitesmoke;
+  transform: scale(1);
+  transition: all .4s ,--gradient-angle .5s;
+}
+
+.buttons .move-up:hover,
+.buttons .move-down:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+  --gradient-angle : 280deg;
+  box-shadow: 0px 0px 10px .1px #3bff9ac4;
+}
+
+
+
+/* Swal Fires */
+
+.my-toast {
+  font-size: 12px;
+  height: auto;
+  /* line-height: 50px; */
+  padding: 0px 80px 10px 80px;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
