@@ -10,9 +10,15 @@ function TodoApp(){
     const [newTask, setNewTask] = useState("")
     const [tasks, setTask] = useState([])
     const [editIndex, setEditIndex] = useState(null)
+    const [isBlocked, setIsBlocked] = useState('blocked-btn')
 
-    function handleInputChange(event    ){
+    function handleInputChange(event){
         setNewTask(event.target.value)
+        if(event.target.value.length === 0 || (editIndex && tasks[editIndex] === event.target.value)) {
+            setIsBlocked('blocked-btn')
+        }else{
+            setIsBlocked('unblocked-btn')
+        }
     }
 
     function addOrSaveTask(){
@@ -24,6 +30,7 @@ function TodoApp(){
             setTask(updatedTasks)
             setEditIndex(null)
             setNewTask("")
+            setIsBlocked('blocked-btn')
 
             MySwal.fire({
                 toast: true,
@@ -39,6 +46,7 @@ function TodoApp(){
         }else{
             setTask([...tasks, newTask])
             setNewTask("")
+            setIsBlocked('blocked-btn')
 
             MySwal.fire({
                 toast: true,                  // makes it a toast notification
@@ -99,7 +107,7 @@ function TodoApp(){
         const allTasks = [...tasks]
         setEditIndex(index)
         setNewTask(allTasks[index])
-
+    
         setTimeout(() => {
             const input = document.querySelector('input')
             if(input){
@@ -145,14 +153,14 @@ function TodoApp(){
 
         {editIndex !== null ? 
             <div className="edit-save-btn">
-                <button type="submit" onClick={addOrSaveTask} className='submit'>Save Task</button>
+                <button type="submit" onClick={addOrSaveTask} className={`submit ${isBlocked}`}>Save Task</button>
                 <button className='cancel-edit' onClick={()=>{
                     setEditIndex(null)
                     setNewTask("")
                     }}>Cancel</button>
             </div>
 
-        : <button type="submit" onClick={addOrSaveTask} className='submit'>Add Task</button> }
+        : <button type="submit" onClick={addOrSaveTask} className={`submit ${isBlocked}`}>Add Task</button> }
         </div>
         
 
@@ -161,7 +169,6 @@ function TodoApp(){
             {tasks.length === 0 && (
                 <div className="empty-tasks">
                     <img src={empty_state_img} alt="Empty Tasks" />
-                    <h5>No Tasks</h5>
                 </div>
             )}
             {tasks.length > 0 && (       

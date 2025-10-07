@@ -61,13 +61,11 @@
 
   .submit{
     color: rgb(255, 255, 255);
-    background: linear-gradient(var(--gradient-angle), rgb(148, 134, 255), #286cff);
     /* padding:  0px 15px; */
     max-width: 90px;
     width: 12vw;
     min-width: 80px;
     height: 40px;
-    border: 2px solid rgb(81, 66, 193);
     border-radius: 50px;
     font-family: 'Poppins';
     font-size: 0.78rem;
@@ -96,7 +94,7 @@
     transform: scale(1);
     transition: all .4s ,--gradient-angle .5s;
   }
-
+  
   .cancel-edit:hover{
     box-shadow: 0px 0px 10px .5px rgb(255, 60, 60);
     --gradient-angle : 280deg;
@@ -104,12 +102,26 @@
     transform: scale(1.02);
   }
 
+  .blocked-btn{
+    background: linear-gradient(135deg, rgb(165, 165, 165), #696969);
+    border: 2px solid rgb(67, 67, 67);
+    pointer-events: none;
+    
+  }
+  
+  .unblocked-btn{
+    background: linear-gradient(var(--gradient-angle), rgb(148, 134, 255), #286cff);
+    border: 2px solid rgb(81, 66, 193);
+  }
+
 
   h1{
-    font-family: 'Alan Sans';
-    margin: 30px auto;
+    font-family: 'Montserrat Alternates';
+    margin: 0px auto 60px auto;
     border-bottom: 1px dashed grey;
+    font-size: 3rem;
     width: max-content;
+    color: rgba(245, 245, 245, 0.82);
   }
 
   h2{
@@ -243,7 +255,7 @@
 
   .empty-tasks{
     position: relative;
-    height: 250px;
+    height: 280px;
     aspect-ratio: 1/1;
     margin: auto;
     top: 50%;
@@ -253,16 +265,7 @@
     height: auto;
     width: 100%;
     object-fit: contain;
-    opacity: .6;
-  }
-
-  .empty-tasks h5{
-    font-family: 'Montserrat Alternates';
-    font-style: italic;
-    font-weight: 700;
-    font-size: 1.2rem;
-    opacity: .6;
-    margin-top: -30px;
+    opacity: .4;
   }
 
   /* Swal Fires */
