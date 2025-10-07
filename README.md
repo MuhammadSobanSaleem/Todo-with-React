@@ -1,16 +1,52 @@
-# React + Vite
+# 📝 TodoApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, interactive **Todo App** built with **React** — my first project after learning **HTML, CSS, and JavaScript**.
+It’s simple, fast, and designed to feel smooth and modern with smart feedback on every action.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+* ➕ Add, ✏️ Edit, and ❌ Delete tasks
+* 🔄 Move tasks **up or down** to reorder
+* 🔒 Smart button logic — auto-disables when input is empty
+* 🎉 Modern **SweetAlert2** toasts for success and confirmation
+* 💅 Sleek, responsive design built with pure **CSS3**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧠 What I Learned
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Using React’s **`useState`** for dynamic UI
+* Handling input and conditional rendering
+* Managing edit/save states
+* Creating a better UX with instant feedback and clean visuals
+
+---
+
+## 🧩 Tech Stack
+
+* ⚛️ **React.js**
+* 💻 **JavaScript (ES6)**
+* 🎨 **CSS3**
+* 🔔 **SweetAlert2**
+
+---
+
+## 🖥️ Live Demo & Code
+
+* **Live App:** [https://vercel.com/simplysobans-projects](https://vercel.com/simplysobans-projects)
+* **GitHub Repo:** [https://github.com/MuhammadSobanSaleem/Todo-with-React](https://github.com/MuhammadSobanSaleem/Todo-with-React)
+
+---
+
+## 💻 How to Run Locally
+
+```bash
+git clone https://github.com/MuhammadSobanSaleem/Todo-with-React.git
+cd Todo-with-React
+npm install
+npm run dev
+```
+
+Then open your browser at [http://localhost:5173](http://localhost:5173) (default Vite dev server port).
