@@ -35,7 +35,7 @@ It’s simple, fast, and designed to feel smooth and modern with smart feedback 
 
 ## 🖥️ Live Demo & Code
 
-* **Live App:** [https://vercel.com/simplysobans-projects](https://vercel.com/simplysobans-projects)
+* **Live App:** [https://todo-with-react-jp2y6fvw3-simplysobans-projects.vercel.app/](https://todo-with-react-jp2y6fvw3-simplysobans-projects.vercel.app/)
 * **GitHub Repo:** [https://github.com/MuhammadSobanSaleem/Todo-with-React](https://github.com/MuhammadSobanSaleem/Todo-with-React)
 
 ---
