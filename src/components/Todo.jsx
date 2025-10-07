@@ -3,6 +3,9 @@ import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 const MySwal = withReactContent(Swal)
 import empty_state_img from '../assets/images/empty_state-no-bg.png'
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import './Todo.css'
+
 
 
 function TodoApp(){
@@ -179,12 +182,21 @@ function TodoApp(){
                             <span className="text">{task}</span>
 
                             <div className="buttons">
-                                <button onClick={()=>{deleteTask(index)}} className="delete" ><i className="fa-solid fa-trash fa-lg" style={{color: "#ffffff"}}></i></button>
-                                <button onClick={()=>{editTask(index)}} className="edit"><i className="fa fa-edit fa-lg" style={{ color: "#ffffff" }}></i></button>
+                                <button onClick={()=>{deleteTask(index)}} className="delete">
+                                    <i className="fa-solid fa-trash fa-lg" style={{color: "#ffffff"}}></i>
+                                </button>
+
+                                <button onClick={()=>{editTask(index)}} className="edit">
+                                    <i className="fa-solid fa-edit fa-lg" style={{ color: "#ffffff" }}></i>
+                                </button>
 
                                 <div className="up-down-btn">
-                                    <button onClick={()=>{moveUp(index)}} className="move-up"><i className="fa-solid fa-arrow-up" style={{color: "#ffffff;"}}></i></button>
-                                    <button onClick={()=>{moveDown(index)}} className="move-down"><i className="fa-solid fa-arrow-down" style={{color: "#ffffff;"}}></i></button>
+                                    <button onClick={()=>{moveUp(index)}} className="move-up">
+                                    <i className="fa-solid fa-arrow-up" style={{color: "#ffffff"}}></i>
+                                    </button>
+                                    <button onClick={()=>{moveDown(index)}} className="move-down">
+                                    <i className="fa-solid fa-arrow-down" style={{color: "#ffffff"}}></i>
+                                    </button>
                                 </div>
                             </div>
                         </li>
